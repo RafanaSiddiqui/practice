@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Child extends ParentClass /*implements Comparable<Child>*/ {
+public class Child extends ParentClass implements /*Comparable<Child>*/ Interface1, Interface2{
 	
 	
 	static String childStatic = "childStatic";
@@ -53,6 +53,13 @@ public class Child extends ParentClass /*implements Comparable<Child>*/ {
 		//throw new IOException();
 		System.out.println("in child");
 		
+	}
+
+
+	@Override
+	public void sameMethod() {
+		// TODO Auto-generated method stub
+		System.out.println("...m childs same Method");
 	}
 
 	/*@Override

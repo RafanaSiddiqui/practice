@@ -80,7 +80,7 @@ public abstract class Test {
 		System.out.println("mid elements in list...."+lnlist.get(middleIndex));*/
 
 		
-		comparingExample();
+		//comparingExample();
 		//findNthLongestElmt();
 		//ListIteratorFailFast();
 		
@@ -91,6 +91,12 @@ public abstract class Test {
 		boolean b1=false;
 		boolean b2= false;
 		System.out.println(b1^b2);
+		
+		char[] chars = new char[] {'\u0097'};
+        String str = new String(chars);
+        System.out.println("..str.."+str);
+        byte[] bytes = str.getBytes();
+        System.out.println(Arrays.toString(bytes));
 		
 		
 
@@ -200,11 +206,15 @@ public abstract class Test {
         Child c1 = new Child ("Harry", 12);
         Child c2 = new Child ("Amy", 13);
         Child c3 = new Child ("lily", 10);
+        Child c4 = new Child ("lily", 14);
+        Child c5 = new Child ("Dan", 10);
         
         ls.add(c1);
         ls.add(c2);
         ls.add(c3);
-        Comparator<Child> comp = Comparator.comparing(Child::getName);
+        ls.add(c4);
+        ls.add(c5);
+        Comparator<Child> comp = Comparator.comparing(Child::getName).thenComparing(Child::getAge);
         ls.sort(comp);
         
         for(Child c: ls)
@@ -329,6 +339,21 @@ public static void ListIteratorFailFast(){
 	public static void testStaticCall(){
 		
 		Child child = new Child("heml",2);
+		
+		Interface1 i1 = child;
+		
+		i1.sameMethod();
+		
+		Interface2 i2 = new Child();
+		i2.sameMethod();
+		
+		Child ch1 = (Child) i1;
+		try {
+			ch1.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}

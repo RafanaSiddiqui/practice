@@ -102,6 +102,18 @@ public class CollectorsExample {
 			System.out.println("..7th filter......"+lst);
 
 
+				
+				 
+				 
+				List<String> countries = new ArrayList<String>();
+				countries.add("india");
+				countries.add("japan");
+				countries.add("china");
+				countries.add("indonesia");
+				countries.parallelStream().forEach((country) -> {
+				    System.out.println(country);
+				});
+				 
     	
     }
 }

@@ -45,7 +45,7 @@ public class ParkingAllotmentProgram {
 					=	listAll.stream().collect(Collectors.groupingBy(Parking::getSize,Collectors.mapping(Parking::getId, 
 																				Collectors.toCollection(LinkedBlockingDeque::new))));
 													
-			System.out.println("......map ....");
+			System.out.println("......map ...."+map);
 		//getting parking ticket for that size
 		
 		
