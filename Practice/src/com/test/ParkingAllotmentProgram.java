@@ -48,7 +48,8 @@ public class ParkingAllotmentProgram {
 			System.out.println("......map ...."+map);
 		//getting parking ticket for that size
 		
-		
+		Queue<String> q = new LinkedBlockingDeque<>();
+		q.add(null);
 		
 		return map;
 		
@@ -66,7 +67,7 @@ public class ParkingAllotmentProgram {
 		list.add(new Parking(ParkingSize.MEDIUM,"D"));
 		list.add(new Parking(ParkingSize.HEAVY,"E"));*/
 		
-		
+	
 		BufferedReader bf = new BufferedReader(new InputStreamReader(ParkingAllotmentProgram.class.getResourceAsStream("ParkingSpace.txt")));
 		
 		Stream<String> str = bf.lines();

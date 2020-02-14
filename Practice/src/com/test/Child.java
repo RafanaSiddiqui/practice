@@ -51,7 +51,7 @@ public class Child extends ParentClass implements /*Comparable<Child>*/ Interfac
 	void read() throws IOException
 	{
 		//throw new IOException();
-		System.out.println("in child");
+		System.out.println("in child read");
 		
 	}
 

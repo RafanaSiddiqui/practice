@@ -33,7 +33,7 @@ public abstract class Test {
         codenames.put("J2SE 5.0", "fTiger");
         codenames.put("Java SE 6", "cMustang");
         
-       //sortMapbyValue(codenames);
+       sortMapbyValue(codenames);
         
         
         comparingExample();
@@ -79,8 +79,8 @@ public abstract class Test {
 		int middleIndex = lnlist.size()/2;
 		System.out.println("mid elements in list...."+lnlist.get(middleIndex));*/
 
-		removeDuplicateFromArray();
-		//comparingExample();
+		//removeDuplicateFromArray();
+		comparingExample();
 		//findNthLongestElmt();
 		//ListIteratorFailFast();
 		
@@ -89,7 +89,7 @@ public abstract class Test {
 		//testStaticCall();
 		
 		boolean b1=false;
-		boolean b2= false;
+		boolean b2= true;
 		System.out.println(b1^b2);
 		/*
 		char[] chars = new char[] {'\u0097'};
@@ -103,10 +103,19 @@ public abstract class Test {
 		System.out.println(".....i......."+ i);
 		
 	
-		char c = 0x000A;
+	/*	char c = 0x000A;
 		System.out.println("...c..."+c);
+		*/
+		//int ids = (int)6.5;
+		/*Double d = 5.53;
+		int k =2;
 		
-		
+		int ik = d.intValue();
+	
+		System.out.println("...ids..."+  ik);*/
+	
+	
+	        
 
 	}
 	

@@ -6,7 +6,7 @@ import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
+import java.util.Spliterator;
 import java.util.stream.Collectors;
 
 import com.test.model.Innings;
@@ -34,7 +34,9 @@ public class TestJava8 {
 		
 		//avergeOfPlayer();
 		
-		topNumberinArray();
+		//topNumberinArray();
+		
+		testSpiltIterator();
 		
 	}
 	
@@ -135,6 +137,19 @@ public class TestJava8 {
 		
 		System.out.println("....count....."+ count+ "....avg.."+avg);
 
+	}
+	
+	
+	public static void testSpiltIterator(){
+		
+		List<String> l = Arrays.asList("One", "two", "three", "four","five");
+		
+		Spliterator<String> split = l.spliterator();
+		
+		Spliterator<String> firsthalf = split.trySplit();
+		split.forEachRemaining(System.out::println);
+		System.out.println(".........-------------------..........");
+		firsthalf.forEachRemaining(System.out::println);
 	}
 
 }
