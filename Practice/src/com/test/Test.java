@@ -79,7 +79,7 @@ public abstract class Test {
 		int middleIndex = lnlist.size()/2;
 		System.out.println("mid elements in list...."+lnlist.get(middleIndex));*/
 
-		
+		removeDuplicateFromArray();
 		//comparingExample();
 		//findNthLongestElmt();
 		//ListIteratorFailFast();
@@ -91,12 +91,20 @@ public abstract class Test {
 		boolean b1=false;
 		boolean b2= false;
 		System.out.println(b1^b2);
-		
+		/*
 		char[] chars = new char[] {'\u0097'};
         String str = new String(chars);
         System.out.println("..str.."+str);
         byte[] bytes = str.getBytes();
-        System.out.println(Arrays.toString(bytes));
+        System.out.println(Arrays.toString(bytes));*/
+		
+		int i = 0;
+		i= i++ + i;
+		System.out.println(".....i......."+ i);
+		
+	
+		char c = 0x000A;
+		System.out.println("...c..."+c);
 		
 		
 
@@ -355,6 +363,22 @@ public static void ListIteratorFailFast(){
 			e.printStackTrace();
 		}
 		
+		
+	}
+	
+	public static void removeDuplicateFromArray(){
+		List<Integer> l= new ArrayList(Arrays.asList(2,3,3,4,6,7,2,9,4));
+		
+		Set<Integer> s = new LinkedHashSet<>(l);
+		
+		for (Integer in : s) {
+			System.out.println("...in set.."+ in);
+		}
+		
+		List<Integer> nodupList = new ArrayList<Integer>(s);
+		for (Integer i : nodupList) {
+			System.out.println("...in no dup listy.."+ i);
+		}
 		
 	}
 	
